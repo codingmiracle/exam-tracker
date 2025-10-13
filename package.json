@@ -10,7 +10,9 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@lynx-js/react": "^0.114.1"
+    "@lynx-js/react": "^0.114.1",
+    "appwrite": "^21.0.0",
+    "react-router": "^6.30.1"
   },
   "devDependencies": {
     "@lynx-js/preact-devtools": "^5.0.1-cf9aef5",
