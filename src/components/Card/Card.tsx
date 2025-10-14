@@ -9,9 +9,11 @@ interface CardProps {
 
 const Card = (props: CardProps) => {
   const className = `Card ${props.classname}`;
-  return<view className={className}>
+  return (
+    <view className={className}>
     {props.children}
-  </view>;
-};
+  </view>
+  )
+}
 
 export default Card;
