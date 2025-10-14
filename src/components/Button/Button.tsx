@@ -1,6 +1,7 @@
 interface buttonProps {
   classname?: string;
   onTap?: () => void
+  children?: React.ReactNode;
 }
 
 const Button = (props: buttonProps) => {
@@ -8,7 +9,7 @@ const Button = (props: buttonProps) => {
 
   return (
     <view className={className} bindtap={props.onTap}>
-      <text>Click me!</text>
+      <text>{props.children}</text>
     </view>
   );
 };

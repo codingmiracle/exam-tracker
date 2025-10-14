@@ -9,7 +9,7 @@
 
     --color-bg: #1e1f28;
     --color-text: #efeeec;
-    --color-text-secondary: #6a6968;
+    --color-text-secondary: #9d9d9c;
     --color-accent: #cd37a5;
     --color-accent-secondary: #d52e87;
 
@@ -65,6 +65,8 @@
     background: #2a2c35;
     padding: var(--m);
     border-radius: var(--s);
+    margin: var(--m);
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18), 0 1.5px 4px 0 rgba(205,55,165,0.08);
 }
 
 .Content {
@@ -88,19 +90,6 @@ text {
     color: var(--color-text-secondary);
 }
 
-.Logo {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 8px;
-}
-
-.Logo--react {
-    width: 100px;
-    height: 100px;
-    animation: Logo--spin infinite 20s linear;
-}
-
 .Title {
     font-size: 36px;
     font-weight: 700;
@@ -115,8 +104,7 @@ text {
 
 .Description {
     font-size: 20px;
-    color: rgba(239, 238, 236, 0.85);
-    margin: 15rpx;
+    color: var(--color-text-secondary);
 }
 
 .Hint {

@@ -1,5 +1,6 @@
 import './App.css'
 import DashboardView from './views/DashboardView';
+import RegisterView from './views/RegisterView';
 
 const easing = (x: number) => {
   "main thread";
@@ -12,7 +13,7 @@ export default function App(props: {
 
   return (
     <view className={"App"}>
-      <DashboardView></DashboardView>
+      <RegisterView></RegisterView>
     </view>
   )
 }
