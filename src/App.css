@@ -11,6 +11,7 @@
     --color-text: #efeeec;
     --color-text-secondary: #6a6968;
     --color-accent: #cd37a5;
+    --color-accent-secondary: #d52e87;
 
     font-size: var(--base-font-size);
     color: var(--color-text);
@@ -23,117 +24,103 @@
     margin-top: var(--m);
 }
 
-    .App {
-        position: relative;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+/* components */
+.App {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
-    text {
-        color: var(--color-text);
-    }
+.Banner {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
 
-    .inputBox {
-        padding: var(--s);
-        border: 1px solid deeppink;
-        border-radius: var(--xs);
-        color: var(--color-text);
-    }
-    .inputBox::placeholder {
-        color: var(--color-text-secondary);
-    }
+.Button {
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-secondary));
+    color: var(--color-text);
+    border: none;
+    padding: var(--s) var(--m);
+    border-radius: var(--xs);
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.Button:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15) inset;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent));
+}
 
-    .Banner {
-        flex: 5;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 100;
-    }
 
-    .Logo {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 8px;
-    }
+.Card {
+    border: #3a3c4e 1px solid;
+    background: #2a2c35;
+    padding: var(--m);
+    border-radius: var(--s);
+}
 
-    .Logo--react {
-        width: 100px;
-        height: 100px;
-        animation: Logo--spin infinite 20s linear;
-    }
+.Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
-    .Logo--lynx {
-        width: 100px;
-        height: 100px;
-        animation: Logo--shake infinite 0.5s ease;
-    }
+text {
+    color: var(--color-text);
+}
 
-    @keyframes Logo--spin {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
-    }
+.inputBox {
+    padding: var(--s);
+    border: 1px solid deeppink;
+    border-radius: var(--xs);
+    color: var(--color-text);
+}
+.inputBox::placeholder {
+    color: var(--color-text-secondary);
+}
 
-    @keyframes Logo--shake {
-        0% {
-            transform: scale(1);
-        }
-        50% {
-            transform: scale(0.9);
-        }
-        100% {
-            transform: scale(1);
-        }
-    }
+.Logo {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
 
-    .Content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+.Logo--react {
+    width: 100px;
+    height: 100px;
+    animation: Logo--spin infinite 20s linear;
+}
 
-    .Arrow {
-        width: 24px;
-        height: 24px;
-    }
+.Title {
+    font-size: 36px;
+    font-weight: 700;
+}
 
-    .Title {
-        font-size: 36px;
-        font-weight: 700;
-    }
+.Subtitle {
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
 
-    .Subtitle {
-        font-style: italic;
-        font-size: 22px;
-        font-weight: 600;
-        margin-bottom: 8px;
-    }
+.Description {
+    font-size: 20px;
+    color: rgba(239, 238, 236, 0.85);
+    margin: 15rpx;
+}
 
-    .Description {
-        font-size: 20px;
-        color: rgba(239, 238, 236, 0.85);
-        margin: 15rpx;
-    }
-
-    .Hint {
-        font-size: 12px;
-        margin: 5px;
-        color: rgba(239, 238, 236, 0.65);
-    }
-
-    .Card {
-        border: #3a3c4e 1px solid;
-        background: #2a2c35;
-        padding: var(--m);
-        border-radius: var(--s);
-    }
+.Hint {
+    font-size: 12px;
+    margin: 5px;
+    color: rgba(239, 238, 236, 0.65);
+}

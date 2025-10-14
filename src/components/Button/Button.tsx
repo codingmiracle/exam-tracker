@@ -1,5 +1,3 @@
-import { TouchableOpacity } from "@lynx-js/react";
-
 interface buttonProps {
   classname?: string;
   onTap?: () => void

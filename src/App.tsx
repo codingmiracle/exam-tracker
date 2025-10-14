@@ -1,7 +1,5 @@
 import './App.css'
-import { Page } from '@lynx-js/react/runtime-components';
-import Card from './components/Card/Card';
-import HomeView from "./views/HomeView";
+import DashboardView from './views/DashboardView';
 
 const easing = (x: number) => {
   "main thread";
@@ -14,7 +12,7 @@ export default function App(props: {
 
   return (
     <view className={"App"}>
-      <HomeView></HomeView>
+      <DashboardView></DashboardView>
     </view>
   )
 }
