@@ -1,17 +1,30 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true,
-
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-
+    "lib": ["DOM", "ES2020"],
+    "jsx": "preserve",
+    "target": "ES2020",
     "noEmit": true,
+    "skipLibCheck": true,
+    "jsxImportSource": "vue",
+    "useDefineForClassFields": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    },
+
+    /* modules */
+    "module": "ESNext",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "verbatimModuleSyntax": true,
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "noUncheckedSideEffectImports": true,
+
+    /* type checking */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
   },
-  "references": [
-    { "path": "./tsconfig.node.json" },
-    { "path": "./src" },
-  ],
-  "files": [],
+  "include": ["src"]
 }
